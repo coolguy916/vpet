@@ -1,7 +1,10 @@
 import pyautogui
 import random
 import tkinter as tk
-x = 1400
+
+#to modify the position
+x = 1200
+y = "150"
 cycle = 0
 check = 1
 idle_num =[1,2,3,4]
@@ -72,7 +75,7 @@ def update(cycle,check,event_number,x):
   frame = walk_negative[cycle]
   cycle , event_number = gif_work(cycle,walk_negative,event_number,1,9)
   x -= -3
- window.geometry('100x100+'+str(x)+'+150')
+ window.geometry('100x100+'+str(x)+'+' + y)
  label.configure(image=frame)
  window.after(1,event,cycle,check,event_number,x)
 window = tk.Tk()
